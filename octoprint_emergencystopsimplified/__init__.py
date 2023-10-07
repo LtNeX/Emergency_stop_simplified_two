@@ -8,7 +8,7 @@ from time import sleep
 import RPi.GPIO as GPIO
 
 
-class Emergency_stop_simplifiedPlugin(octoprint.plugin.StartupPlugin,
+class Emergency_stop_simplifiedtwoPlugin(octoprint.plugin.StartupPlugin,
                                        octoprint.plugin.EventHandlerPlugin,
                                        octoprint.plugin.TemplatePlugin,
                                        octoprint.plugin.SettingsPlugin,
@@ -123,7 +123,7 @@ class Emergency_stop_simplifiedPlugin(octoprint.plugin.StartupPlugin,
                 # version check: github repository
                 type="github_release",
                 user="Mechazawa",
-                repo="Emergency_stop_simplified",
+                repo="Emergency_stop_simplifiedtwo",
                 current=self._plugin_version,
 
                 # update method: pip
@@ -152,7 +152,7 @@ def __plugin_check__():
 
 def __plugin_load__():
     global __plugin_implementation__
-    __plugin_implementation__ = Emergency_stop_simplifiedPlugin()
+    __plugin_implementation__ = Emergency_stop_simplifiedtwoPlugin()
 
     global __plugin_hooks__
     __plugin_hooks__ = {
